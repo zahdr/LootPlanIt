@@ -1,6 +1,6 @@
 ## Interface: 30401
 ## Title: LootPlanIt
-## Author: haaaz
+## Author: zahdr
 ## Notes: Make Loot Council easy!
 ## Version: @project-version@
 ## DefaultState: enabled

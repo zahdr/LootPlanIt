@@ -1,0 +1,21 @@
+## Interface: 30401
+## Title: LootPlanIt
+## Author: haaaz
+## Notes: Make Loot Council easy!
+## Version: 0.0.1
+## SavedVariables: LootPlanItDB
+
+# Libraries
+libs.xml
+
+# Core
+core.lua
+
+# Classes
+classes/helper.lua
+classes/db.lua
+#feature.lua
+classes/lootImport.lua
+classes/slashCommands.lua
+classes/tooltip.lua
+classes/welcomeMessage.lua

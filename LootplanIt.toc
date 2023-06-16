@@ -2,7 +2,7 @@
 ## Title: LootPlanIt
 ## Author: haaaz
 ## Notes: Make Loot Council easy!
-## Version: 0.0.1
+## Version: 0.1.0
 ## SavedVariables: LootPlanItDB
 
 # Libraries
@@ -14,7 +14,6 @@ core.lua
 # Classes
 classes/helper.lua
 classes/db.lua
-#feature.lua
 classes/lootImport.lua
 classes/slashCommands.lua
 classes/tooltip.lua

@@ -25,10 +25,4 @@ LPI.commands = {
 	}
 };
 
-
-local function commandExecute(command)
-	print("das hier ist 123")
-	LPI.commands.dictionary.command()
-end
-
 --]]

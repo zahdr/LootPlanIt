@@ -3,7 +3,9 @@
 ## Author: haaaz
 ## Notes: Make Loot Council easy!
 ## Version: 0.1.0
+## DefaultState: enabled
 ## SavedVariables: LootPlanItDB
+## X-Curse-Project-ID: 876058
 
 # Libraries
 libs.xml

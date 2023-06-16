@@ -3,23 +3,6 @@ local _, LPI = ...;
 LPI.db = {}
 db = LPI.db
 
-
---[[
-    itemId;rating;prio;player
-    45825;78,67%;1;Eowyn
-    45825;69,67%;3;Darkhug
-    45825;68,88%;1;Slimez
-
-    {{45825;78,67%;1;Eowyn},{45825;69,67%;3;Darkhug},{55555;68,88%;1;Slimez}}
-
-
-    meta -> importedAt (timestamp)
-
-
-    --]]
-
-
-
 function db:init()
     if not LootPlanItDB then
         LootPlanItDB = {}

@@ -15,12 +15,17 @@ function db:init()
     if not LootPlanItDB.lootCouncil.itemIds then
         LootPlanItDB.lootCouncil.itemIds = {}
     end
+
+    if not LootPlanItDB.lootCouncil.metaData then
+        LootPlanItDB.lootCouncil.metaData = {}
+    end
 end
 
 function db:resetLootCouncilData()
     LootPlanItDB = {}
     LootPlanItDB.lootCouncil = {}
     LootPlanItDB.lootCouncil.itemIds = {}
+    LootPlanItDB.lootCouncil.metaData = {}
 end
 
 function LPI:importLootCouncilData(data)
@@ -47,6 +52,22 @@ function LPI:importLootCouncilData(data)
         table.insert(LootPlanItDB.lootCouncil.itemIds[itemId], record)
     end       
     LPI:infoMessage("Loot Council Items imported successfully!")
+end
+
+function LPI:getMetaDataImportTimeText() 
+    if LootPlanItDB.lootCouncil.metaData.lastImport then
+        return string.format(
+            "\nCurrent data got imported at |cff0088ff%s",
+            LootPlanItDB.lootCouncil.metaData.lastImport
+        );
+    else
+        return "\nNO DATA FOUND"
+    end
+end
+
+function LPI:writeMetaDataImportTime() 
+    local date = date("%Y-%m-%d %H:%M:%S")
+    LootPlanItDB.lootCouncil.metaData.lastImport = date
 end
 
 

@@ -101,5 +101,3 @@ function lootImport:draw()
         end);
     window:AddChild(buttonImport);
 end
-
-lootImportOverview:draw()

@@ -42,6 +42,7 @@ function lootImportOverview:draw()
     buttonImport:SetCallback("OnClick", 
         function() 
             lootImport:draw();
+            AceGUI:Release(window)
         end);
     window:AddChild(buttonImport);
 
@@ -98,6 +99,8 @@ function lootImport:draw()
             local data = boxInput:GetText()
             db:resetLootCouncilData()
             LPI:importLootCouncilData(data)
+            AceGUI:Release(window)
+            lootImportOverview:draw()
         end);
     window:AddChild(buttonImport);
 end

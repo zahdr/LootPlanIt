@@ -13,7 +13,7 @@
 
 
 #### **Data Explanations**
-Item ID = ID of the item
-Player Priority = Player priority bound to the item (in which order do players get the item)
-BIS list priority = Slot priority on the players bis list
-Player name = Name of the player
+- Item ID = ID of the item
+- Player Priority = Player priority bound to the item (in which order do - players get the item)
+- BIS list priority = Slot priority on the players bis list
+- Player name = Name of the player

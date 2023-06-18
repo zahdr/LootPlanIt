@@ -4,15 +4,15 @@ function LPI:message(...)
     print(...)
 end
 
-function LPI:coloredMessage (color, ...)
+function LPI:coloredMessage(color, ...)
     LPI:message(string.format("|c00%s%s", color, ...))
 end
 
-function LPI:debug (...)
+function LPI:debug(...)
     LPI:coloredMessage("fc0000", ...)
 end
 
-function LPI:infoMessage (...)
+function LPI:infoMessage(...)
     LPI:coloredMessage("0088ff", ...)
 end
 

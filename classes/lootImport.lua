@@ -22,10 +22,7 @@ function lootImportOverview:draw()
     
     local labelTimestamp = AceGUI:Create("Label");
     labelTimestamp:SetFullWidth(true);
-    labelTimestamp:SetText(string.format(
-        "\nCurrent data got imported at |cff0088ff%s",
-        "ERROR"
-    ));
+    labelTimestamp:SetText(LPI:getMetaDataImportTimeText());
     labelTimestamp:SetJustifyH("MIDDLE");
     labelTimestamp:SetFontObject(_G["GameFontNormal"]);
     window:AddChild(labelTimestamp);
@@ -62,6 +59,8 @@ function lootImportOverview:draw()
         function() 
             db:resetLootCouncilData()
             LPI:infoMessage("Deleted Loot Council Items!")
+            AceGUI:Release(window)
+            lootImportOverview:draw()
         end);
     window:AddChild(buttonClear);
 end
@@ -99,6 +98,7 @@ function lootImport:draw()
             local data = boxInput:GetText()
             db:resetLootCouncilData()
             LPI:importLootCouncilData(data)
+            LPI:writeMetaDataImportTime() 
             AceGUI:Release(window)
             lootImportOverview:draw()
         end);

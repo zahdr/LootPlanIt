@@ -13,7 +13,7 @@ lootImport = LPI.classes.lootImport.import;
 
 function lootImportOverview:draw()
     local window = AceGUI:Create("Frame");
-    window:SetTitle(LPI.title .. " " .. LPI.version);
+    window:SetTitle(LPI.title .. " v" .. LPI.version);
     window:SetLayout("Flow");
     window:SetWidth(490);
     window:SetHeight(150);

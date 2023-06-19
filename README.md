@@ -4,6 +4,13 @@
 3. Hover over priorized items and enjoy the easy way to council loot. 
 
 
+### **Chat Commands**
+`"/lpi" - opens the import gui`
+
+`"/lpi reset" - resets the database if something fails after fe. an update`
+
+`"/lpi v" - printing the current version in chat`
+
 #### **Data Format**
 `{{Item ID; Player priority; BIS list priority; Player name}}`
 

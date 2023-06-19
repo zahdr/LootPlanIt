@@ -58,7 +58,6 @@ function lootImportOverview:draw()
     buttonClear:SetCallback("OnClick", 
         function() 
             db:resetLootCouncilData()
-            LPI:infoMessage("Deleted Loot Council Items!")
             AceGUI:Release(window)
             lootImportOverview:draw()
         end);

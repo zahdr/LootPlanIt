@@ -26,6 +26,8 @@ function db:resetLootCouncilData()
     LootPlanItDB.lootCouncil = {}
     LootPlanItDB.lootCouncil.itemIds = {}
     LootPlanItDB.lootCouncil.metaData = {}
+
+    LPI:infoMessage("Deleted loot council items!")
 end
 
 function LPI:importLootCouncilData(data)

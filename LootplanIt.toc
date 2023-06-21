@@ -1,8 +1,8 @@
-## Interface: 30401
+## Interface: 30402
 ## Title: LootPlanIt
 ## Author: zahdr
 ## Notes: Make Loot Council easy!
-## Version: v0.2.2
+## Version: v0.2.3
 ## DefaultState: enabled
 ## SavedVariables: LootPlanItDB
 ## X-Curse-Project-ID: 876058

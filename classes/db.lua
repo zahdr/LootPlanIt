@@ -3,6 +3,23 @@ local _, LPI = ...;
 LPI.db = {}
 db = LPI.db
 
+
+local function sortByItemRating(a, b)
+    local ratingA = tonumber(string.sub(a["itemRating"], 1, -2))
+    local ratingB = tonumber(string.sub(b["itemRating"], 1, -2))
+    
+    return ratingA > ratingB
+end
+
+local function sortSubTablesByItemRating(tbl)
+    for key, subTable in pairs(tbl) do
+        if #subTable > 1 then
+            table.sort(subTable, sortByItemRating)
+        end
+    end
+end
+
+
 function db:init()
     if not LootPlanItDB then
         LootPlanItDB = {}
@@ -31,6 +48,8 @@ function db:resetLootCouncilData()
 end
 
 function LPI:importLootCouncilData(data)
+    local tmpTbl = {}
+
     if type(data) == "string" then
         data = LPI:convertStringToTable(data)
     end
@@ -40,9 +59,9 @@ function LPI:importLootCouncilData(data)
         local itemRating = entry[2]
         local itemPrio = entry[3]
         local playerName = entry[4]  
-        
-        if not LootPlanItDB.lootCouncil.itemIds[itemId] then
-            LootPlanItDB.lootCouncil.itemIds[itemId] = {}
+
+        if not tmpTbl[itemId] then
+            tmpTbl[itemId] = {}
         end
 
         local record = {
@@ -51,8 +70,11 @@ function LPI:importLootCouncilData(data)
             playerName = playerName
         }
         
-        table.insert(LootPlanItDB.lootCouncil.itemIds[itemId], record)
-    end       
+        table.insert(tmpTbl[itemId], record)
+    end
+    
+    sortSubTablesByItemRating(tmpTbl)
+    LootPlanItDB.lootCouncil.itemIds = tmpTbl     
     LPI:infoMessage("Loot Council Items imported successfully!")
 end
 

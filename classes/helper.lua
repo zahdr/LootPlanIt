@@ -27,5 +27,6 @@ function LPI:convertStringToTable(string)
         end
         table.insert(dataTable, tmpTable)
     end
+    
     return dataTable
 end

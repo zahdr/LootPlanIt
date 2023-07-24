@@ -2,7 +2,7 @@
 ## Title: LootPlanIt
 ## Author: zahdr
 ## Notes: Make Loot Council easy!
-## Version: v0.2.4
+## Version: v0.3.0
 ## DefaultState: enabled
 ## SavedVariables: LootPlanItDB
 ## X-Curse-Project-ID: 876058

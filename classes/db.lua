@@ -58,7 +58,8 @@ function LPI:importLootCouncilData(data)
         local itemId = entry[1]
         local itemRating = entry[2]
         local itemPrio = entry[3]
-        local playerName = entry[4]  
+        local playerName = entry[4]
+        local playerParse = entry[5]   
 
         if not tmpTbl[itemId] then
             tmpTbl[itemId] = {}
@@ -67,7 +68,8 @@ function LPI:importLootCouncilData(data)
         local record = {
             itemRating = itemRating,
             itemPrio = itemPrio,
-            playerName = playerName
+            playerName = playerName,
+            playerParse = playerParse
         }
         
         table.insert(tmpTbl[itemId], record)

@@ -12,7 +12,7 @@ function tooltipAddPrios(tooltip)
 				tooltip:AddLine(" ")
 				tooltip:AddLine(string.format("|c00%s%s", "0088ff", LPI.title .. " Rating"))
 			end
-			tooltip:AddLine("   " .. record.itemRating .. "   P" .. record.itemPrio .. "  " .. record.playerName)
+			tooltip:AddLine("   " .. record.itemRating .. "   P" .. record.itemPrio .. "  " .. record.playerName .. " (Parse: " .. record.playerParse .. ")")
 		end
 		if loopStop == 1 then
 			tooltip:AddLine(" ")

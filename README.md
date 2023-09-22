@@ -21,6 +21,7 @@
 `{{45518;100%;1;Raider1;7;2;100%},{45518;95%;3;Raider2;9;1;90%},{45518;70%;8;Raider3;5;2;100%}}`
 
 
+
 #### **Data Explanations**
 - Item ID = ID of the item
 - Player Priority = Player priority bound to the item (in which order do - players get the item - percentage based)

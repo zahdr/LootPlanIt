@@ -14,16 +14,18 @@
 `"/lpi reset" or "/lpi r" - resets the database if something fails after fe. an update`
 
 #### **Data Format**
-`{{Item ID; Player priority; BIS list priority; Player name; Player parse}}`
+`{{Item ID; Player priority; BIS list priority; Player name; BIS received; TOP3 received; Player parse}}`
 
 
 #### **Example**
-`{45518;1;1;Raider1,100%},{45518;2;3;Raider2;90%},{45518;3;8;Raider3,;100%}`
+`{{45518;100%;1;Raider1;7;2;100%},{45518;95%;3;Raider2;9;1;90%},{45518;70%;8;Raider3;5;2;100%}}`
 
 
 #### **Data Explanations**
 - Item ID = ID of the item
-- Player Priority = Player priority bound to the item (in which order do - players get the item)
+- Player Priority = Player priority bound to the item (in which order do - players get the item - percentage based)
 - BIS list priority = Slot priority on the players bis list
 - Player name = Name of player
+- BIS received = Number of BIS items received by player
+- TOP3 received = Amount of TOP3 BIS items received by player
 - Player parse = Parses of player
